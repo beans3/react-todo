@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-@counter-style circled-alpha {
+@counter-style purple-heart {
   system: cyclic;
   symbols: 💜;
   suffix: " ";
@@ -48,7 +48,7 @@
 }
 
 .list {
-  list-style-type: circled-alpha;
+  list-style-type: purple-heart;
   text-align: left; /* 왼쪽 정렬로 변경 */
 }
 
