@@ -39,7 +39,7 @@ function App() {
     <>
       <div className='container'>
         <div>
-          <input type='text' value={inputValue} onChange={handleInputChange} onKeyDown={handleKeyDown} />
+          <input type='text' placeholder='To do...' value={inputValue} onChange={handleInputChange} onKeyDown={handleKeyDown} />
           <button onClick={handleAddItem}>추가</button>
         </div>
         <ul className='list'>

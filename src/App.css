@@ -60,6 +60,31 @@ input[type="text"] {
   width: 500px;
   height: 30px;
   margin-right: 10px;
+  border: none;
+  border-bottom: 2px solid mediumslateblue;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Firefox */
+input::-moz-placeholder {
+  color: darkgray;
+  font-size: 16px;
+}
+
+/* Internet Explorer 10+ */
+input:-ms-input-placeholder {
+  color: darkgray;
+  font-size: 16px;
+}
+
+/* Chrome, Opera, Safari, and Edge */
+input::placeholder {
+  color: darkgray;
+  font-size: 16px;
 }
 
 .delete-button {
