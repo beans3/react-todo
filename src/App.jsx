@@ -21,7 +21,8 @@ function App() {
     if (inputValue.trim() !== '') {
       const newItem = {
         id: Date.now(),
-        content: inputValue
+        content: inputValue,
+        isChecked: false
       }
       setList([...list, newItem])
       setInputValue('')
@@ -35,6 +36,11 @@ function App() {
     setList(updatedList)
   }
 
+  const handleCheckboxChange = (itemId) => {
+    const updatedList = list.map(item => item.id === itemId ? { ...item, isChecked: !item.isChecked } : item)
+    setList(updatedList)
+  }
+
   return (
     <>
       <div className='container'>
@@ -45,8 +51,8 @@ function App() {
         <ul className='list'>
           {
             list.map(post => (
-              <li key={post.id}>
-                {post.content}
+              <li key={post.id} className={post.isChecked ? 'checked' : ''} onChange={() => handleCheckboxChange(post.id)}>
+                <input type='checkbox'/ >{post.content}
                 <button className='delete-button' onClick={() => handleDeleteItem(post.id)}>삭제</button>
               </li>
             ))
