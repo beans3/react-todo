@@ -51,8 +51,10 @@ function App() {
         <ul className='list'>
           {
             list.map(post => (
-              <li key={post.id} className={post.isChecked ? 'checked' : ''} onChange={() => handleCheckboxChange(post.id)}>
-                <input type='checkbox'/ >{post.content}
+              <li key={post.id} className={post.isChecked ? 'checked' : ''}>
+                <label>
+                  <input type='checkbox' onChange={() => handleCheckboxChange(post.id)}/>{post.content}
+                </label>
                 <button className='delete-button' onClick={() => handleDeleteItem(post.id)}>삭제</button>
               </li>
             ))

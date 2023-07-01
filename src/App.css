@@ -48,7 +48,39 @@
 }
 
 .list li {
+  display: flex;
+  align-items: center;
   margin: 10px 10px 10px 0px;
+}
+
+.list li label {
+  display: flex;
+  justify-content: center;
+}
+
+.list li.checked label {
+  text-decoration: line-through; /* 체크박스 선택 시 텍스트에 line-through 효과 적용 */
+}
+
+.list li input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.list li input[type="checkbox"]:checked {
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
 }
 
 input[type="text"] {
@@ -84,8 +116,4 @@ input::placeholder {
 
 .delete-button {
   margin-left: 10px;
-}
-
-.checked {
-  text-decoration: line-through;
 }
